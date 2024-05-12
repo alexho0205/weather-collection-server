@@ -8,6 +8,6 @@ http.createServer(function (req, res) {
 }).listen(8080); //the server object listens on port 8080
 
 var cron = require('node-cron');
-cron.schedule('*/30 * * * * *', () => {
+  cron.schedule('*/30 * * * * *', () => {
   api.getForecast();
 });
