@@ -16,6 +16,12 @@ function saveData(data) {
   }
 
 module.exports = {
+
+    queryData: function(){
+        var row = db.pool.query('select * from cwb_weather_forcast');
+        return row;
+    },
+
     getForecast: function () {
         console.log(`get weather forcast from ${url}`);
 
